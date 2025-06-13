@@ -13,7 +13,7 @@ app.get('/', (req, res)=> res.sendFile(path.join(__dirname, '../client/dist/inde
 app.use('/assets', express.static(path.join(__dirname, '../client/dist/assets'))); 
 
 //use api routes
-app.use('./api', require('./api'))
+app.use('/api', require('./api'))
 
 //custom error handling route
 app.use((err, req, res, next)=> {
